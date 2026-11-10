@@ -14,7 +14,7 @@ module Data_Memory(
             memory[i] = 32'd0;
     end
 
-    // Word-aligned, combinational read
+
     always @(*) begin
         if (mem_read && (address[1:0] == 2'b00) && (address < 32'd1024))
             read_data = memory[address[9:2]];
@@ -22,7 +22,6 @@ module Data_Memory(
             read_data = 32'd0;
     end
 
-    // Synchronous write
     always @(posedge clk) begin
         if (mem_write && (address[1:0] == 2'b00) && (address < 32'd1024))
             memory[address[9:2]] <= write_data;
