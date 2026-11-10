@@ -9,7 +9,6 @@ module Instruction_Memory(
         for (i = 0; i < 256; i = i + 1)
             memory[i] = 32'h00000013; // NOP = ADDI x0,x0,0
 
-        // Demonstration program (word addresses 0 through 7)
         memory[0] = 32'h002081B3; // ADD  x3,x1,x2
         memory[1] = 32'h40118233; // SUB  x4,x3,x1
         memory[2] = 32'h0041F2B3; // AND  x5,x3,x4
