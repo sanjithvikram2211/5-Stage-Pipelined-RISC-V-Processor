@@ -19,9 +19,7 @@ module RISC_V_TB;
         repeat (2) @(negedge clk);
         reset = 0;
 
-        // Simulation-only preload of source registers:
-        // x1 = 10, x2 = 5. The architectural register file
-        // is otherwise reset to zero.
+      
         @(negedge clk);
         DUT.RF.registers[1] = 32'd10;
         DUT.RF.registers[2] = 32'd5;
