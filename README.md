@@ -151,7 +151,6 @@ It includes signals related to:
 - Memory read and write operations.
 - Write-back data.
 
-Add your actual ModelSim waveform screenshot here:
 
 ![RISC-V Processor ModelSim Waveform](Waveforms/simulation.png)
 
